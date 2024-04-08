@@ -8,9 +8,14 @@ var typed = new Typed(".typing",{
 
 // Aside
 const sectionList = document.querySelectorAll(".section")
-const nav = document.querySelectorAll("#nav_a");
+const navbar = document.querySelectorAll(".nav");
+navbar.forEach(navbarItem => {
+    nav = navbarItem.querySelectorAll("li");
+});
+
 for(let i = 0;i < nav.length; i++){
-    const a = nav[i]
+    const a = nav[i].querySelector("a");
+    
     a.addEventListener("click",function(){
         for(j = 0 ; j < sectionList.length; j++){
             sectionList[j].classList.remove("back-section");
@@ -19,9 +24,10 @@ for(let i = 0;i < nav.length; i++){
             if(nav[j].classList.contains("active")){
                 sectionList[j].classList.add("back-section")
             }
-            nav[j].classList.remove("active");
+            nav[j].querySelector("a").classList.remove("active");
         }
         this.classList.add("active")
+    
         showSection(this);
         if(window.innerWidth < 1200){
             asideTogglerbtn();
@@ -56,3 +62,5 @@ function updateNav(element){
 document.querySelector(".hire-me").addEventListener("click",() => {
     console.log(this)
 })
+
+

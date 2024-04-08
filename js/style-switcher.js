@@ -7,12 +7,18 @@ styleSwitcherToggle.addEventListener('click',() => {
 });
 
 // hide style switcher on scroll
-
-window.addEventListener('scroll' ,()=>{
-    if(document.querySelector(".style-switcher").classList.contains('open')){
-        document.querySelector(".style-switcher").classList.remove('open');
-    }
+// not working
+document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('scroll', () => {
+        console.log("scroll event fired");
+        
+        if (document.querySelector(".style-switcher").classList.contains('open')) {
+            console.log("Removing 'open' class from .style-switcher");
+            document.querySelector(".style-switcher").classList.remove('open');
+        }
+    });
 });
+
 // theme colors
 
 const alternateStyle = document.querySelectorAll(".alternate-style");

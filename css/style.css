@@ -78,7 +78,7 @@ ul
 {
     0%
     {
-        transform: translateX((100%));
+        transform: translateX(100%);
     }
     100%
     {
@@ -277,9 +277,9 @@ ul
     top: -6px;
     left: 0;
 }
-.aside .nav-toggler.open span ::before 
+.aside .nav-toggler.open span::before 
 {
-    transform:rotate((45deg));
+    transform:rotate(45deg);
     top: 0;
 }
 .aside .nav-toggler span::after
@@ -292,9 +292,9 @@ ul
     top: 6px;
     left: 0;
 }
-.aside .nav-toggler.open span ::after
+.aside .nav-toggler.open span::after
 {
-    transform:rotate((-45deg));
+    transform:rotate(-45deg);
     top: 0;
 }
 .aside .nav
