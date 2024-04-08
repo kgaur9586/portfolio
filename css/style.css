@@ -380,7 +380,8 @@ h3.my-profession
 }
 .home .home-img img:hover
 {
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
+    transform: rotate(-5deg) scale(1.1);
     box-shadow: 20px 20px 20px rgba(48,46,77,0.15);
     
 }
