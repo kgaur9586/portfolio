@@ -56,11 +56,19 @@ function asideTogglerbtn(){
     }
 }
 function updateNav(element){
-    console.log(element.getAttribute("href").split("#")[1])
+    const target = element.getAttribute("href").split("#")[1]
+    for(let j = 0; j < nav.length ; j++){
+        nav[j].querySelector("a").classList.remove("active");
+        const target = element.getAttribute("href").split("#")[1]
+        if(target === nav[j].querySelector('a').getAttribute("href").split("#")[1]){
+            nav[j].querySelector('a').classList.add("active");
+        }
+    }
 }
 
-document.querySelector(".hire-me").addEventListener("click",() => {
-    console.log(this)
+document.querySelector(".GoToAbout").addEventListener("click",function(){
+    updateNav(this);
+    showSection(this);
 })
 
 
